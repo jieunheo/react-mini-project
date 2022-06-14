@@ -1,0 +1,85 @@
+.todo {
+  display: flex;
+  align-items: center;
+  
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  background-color: #3b3b3b;
+
+  border-radius: 10px;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.date {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #292929;
+
+  border-radius: 10px;
+  border: 1px solid #fff;
+
+  text-align: center;
+}
+
+.year {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.month {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.day {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.text {
+  flex-grow: 1;
+
+  font-weight: 900;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.actions button {
+  padding: 10px 20px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.actions button:active {
+  transform: scale(98%);
+}
+
+.delete-btn {
+  background-color: tomato;
+}
+
+.delete-btn:hover {
+  background-color: rgb(252, 116, 92);
+}
+
+.complate-btn {
+  margin-right: 10px;
+}
+
+.complate-btn {
+  background-color: rgb(84, 152, 185);
+}
+
+.complate-btn:hover {
+  background-color: rgb(104, 154, 179);
+}

@@ -1,0 +1,12 @@
+.list {
+  width: 80%;
+  max-width: 900px;
+  background-color: #292929;
+  margin: 0 auto;
+  padding: 30px 15px;
+
+  border-radius: 10px;
+
+  color: #fff;
+  font-size: 1.6rem;
+}
