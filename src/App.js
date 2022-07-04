@@ -17,10 +17,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/movies' element={<Movies />} />
-        {!login && <Route path='/Login' element={<Login setLogin={setLogin(true)} />} />}
-        {!login && <Route path="*" element={<Navigate to="/login" setLogin={setLogin(true)} />} />}
+        {!login && <Route path='/Login' element={<Login setLogin={() => setLogin(true)} />} />}
+        {!login && <Route path="*" element={<Navigate to="/login" setLogin={() => setLogin(true)} />} />}
         {login && <Route path='/todo' element={<ToDo />} />}
-        {login && <Route path="/profile" element={<Profile />} />}
+        {login && <Route path="/profile" element={<Profile logout={() => setLogin(false)} />} />}
       </Routes>
     </Router>
   );

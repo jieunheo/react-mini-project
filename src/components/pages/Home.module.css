@@ -4,11 +4,11 @@
   color: white;
 }
 
-.main h1 {
+.title {
   font-size: 24px;
   margin-bottom: 30px;
 }
 
-.main p {
+.text {
   font-size: 18px;
 }

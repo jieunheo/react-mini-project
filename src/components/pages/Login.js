@@ -39,7 +39,7 @@ const Login = ({ setLogin }) => {
 
   return (
     <div className={classes.login}>
-      <h1>{isLogin ? 'LOGIN' : 'JOIN'}</h1>
+      <h1 className={classes.title}>{isLogin ? 'LOGIN' : 'JOIN'}</h1>
       <form className={classes['login-form']} onSubmit={loginHandler}>
         <label htmlFor='id'>ID</label>
         <input
@@ -55,8 +55,10 @@ const Login = ({ setLogin }) => {
           name='password'
           ref={passwordInputRef}
         />
-        <button type='submit'>{isLogin ? 'LOGIN' : 'JOIN'}</button>
-        <button type='button' className={classes.replace} onClick={replaceHandler}>{isLogin ? 'TO JOIN' : 'TO LOGIN'}</button>
+        <div className={classes.actions}>
+          <button className={classes.submit} disabled={idInputRef.current.value === '' || passwordInputRef.current.value === ''} type='submit'>{isLogin ? 'LOGIN' : 'JOIN'}</button>
+          <button type='button' className={classes.replace} onClick={replaceHandler}>{isLogin ? 'TO JOIN' : 'TO LOGIN'}</button>
+        </div>
       </form>
     </div>
   );
