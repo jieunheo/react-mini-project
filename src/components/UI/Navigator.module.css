@@ -1,0 +1,16 @@
+.nav {
+  font-size: 24px;
+  background-color: rgb(84, 152, 185);
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  
+  padding: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
