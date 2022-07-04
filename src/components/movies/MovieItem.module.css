@@ -1,0 +1,40 @@
+.movie-item {
+  width: 46%;
+  min-height: 380px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: black;
+  margin-bottom: 30px;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.year {
+  font-size: 14px;
+  color: gray;
+}
+
+@media screen and (min-width: 720px) {
+  .movie-item {
+    width: 30%;
+    min-height: 300px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .movie-item {
+    width: 23%;
+    min-height: 370px;
+  }
+}

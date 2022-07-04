@@ -1,0 +1,21 @@
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+}
+
+.loading {
+  font-size: 30px;
+}

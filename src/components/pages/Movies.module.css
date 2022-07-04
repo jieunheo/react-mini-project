@@ -1,0 +1,14 @@
+.movie {
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+}
+
+.movie h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.movie p {
+  font-size: 18px;
+}
