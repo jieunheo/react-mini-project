@@ -15,7 +15,7 @@ const Search = () => {
         onChange={changeHandler}
         placeholder='entered movie keyword'
       />
-      <button disabled={searchParam.length < 2} className={classes.button} onClick={submitHandler}>Search</button>
+      <button disabled={searchParam.trim().length <= 2} className={classes.button} onClick={submitHandler}>Search</button>
     </div>
   );
 }
