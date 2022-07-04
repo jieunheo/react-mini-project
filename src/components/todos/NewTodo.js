@@ -10,6 +10,7 @@ const NewTodo = ({ onAddTodo }) => {
 
     const enteredText = textInputRef.current.value;
     onAddTodo(enteredText);
+    textInputRef.current.value = '';
   };
 
   return (

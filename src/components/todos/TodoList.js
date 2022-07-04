@@ -9,8 +9,8 @@ const TodoList = ({ todos, onDeleteTodo, onCompleteTodo }) => {
       <ul className={classes.list}>
         {todos.map(todo => {
           const year = new Date(todo.date).getFullYear();
-          let month = new Date(todo.date).getMonth();
-          let day = new Date(todo.date).getDay();
+          let month = new Date(todo.date).getMonth() + 1;
+          let day = new Date(todo.date).getDate();
 
           if(month < 10) month = '0' + month;
           if(day < 10) day = '0' + day;
