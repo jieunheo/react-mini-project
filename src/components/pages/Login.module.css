@@ -62,10 +62,6 @@
   background-color: rgb(104, 154, 179);
 }
 
-.actions .submit:disabled {
-  background-color: gray;
-}
-
 .actions .replace {
   background-color: gray;
   margin-top: 10px;

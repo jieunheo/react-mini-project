@@ -21,7 +21,8 @@ const Login = ({ setLogin }) => {
     const enteredPassword = passwordInputRef.current.value;
 
     if(isLogin) {
-      
+      setLogin();
+      navigate('/');
     } else {
       fetch('https://react-mini-project-5b0c7-default-rtdb.firebaseio.com/users.json', {
         method: 'POST',
@@ -33,7 +34,7 @@ const Login = ({ setLogin }) => {
         headers: { 'Content-Type': 'application/json'}
       });
       setLogin();
-      navigate('/todo');
+      navigate('/');
     }
   }
 
@@ -56,7 +57,7 @@ const Login = ({ setLogin }) => {
           ref={passwordInputRef}
         />
         <div className={classes.actions}>
-          <button className={classes.submit} disabled={idInputRef.current.value === '' || passwordInputRef.current.value === ''} type='submit'>{isLogin ? 'LOGIN' : 'JOIN'}</button>
+          <button className={classes.submit} type='submit'>{isLogin ? 'LOGIN' : 'JOIN'}</button>
           <button type='button' className={classes.replace} onClick={replaceHandler}>{isLogin ? 'TO JOIN' : 'TO LOGIN'}</button>
         </div>
       </form>
