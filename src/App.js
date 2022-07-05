@@ -8,6 +8,8 @@ import Login from './components/pages/Login';
 import Profile from './components/pages/Profile';
 import Movies from './components/pages/Movies';
 import About from './components/pages/About';
+import Counter from './components/pages/Counter';
+import ErrorBoundaries from './components/ErrorBoundaries';
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -19,6 +21,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/movies' element={<Movies />} />
         <Route path='/about' element={<About />} />
+        <Route path='/counter' element={
+          <ErrorBoundaries><Counter /></ErrorBoundaries>
+        } />
         {!login && <Route path='/Login' element={<Login setLogin={() => setLogin(true)} />} />}
         {!login && <Route path="*" element={<Navigate to="/login" setLogin={() => setLogin(true)} />} />}
         {login && <Route path='/todo' element={<ToDo />} />}

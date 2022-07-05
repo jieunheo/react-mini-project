@@ -24,6 +24,11 @@ const Navigator = ({ login }) => {
             <a className={pathName === '/about' && classes.path}>About</a>
           </Link>
         </li>
+        <li>
+          <Link to="/counter">
+            <a className={pathName === '/counter' && classes.path}>Counter</a>
+          </Link>
+        </li>
         {
           !login ? (
             <li>
