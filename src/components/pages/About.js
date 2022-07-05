@@ -1,9 +1,11 @@
 import useFetch from "../../hooks/use-fetch";
 
 import classes from './About.module.css';
+import HOC from "../HOC";
 
-const About = () => {
+const About = (props) => {
   const {data} = useFetch(`https://jsonplaceholder.typicode.com/posts`);
+  console.log(props);
   return (
     <div className={classes.wrap}>
       <h1 className={classes.h1}>About</h1>
@@ -21,4 +23,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default HOC(About);
