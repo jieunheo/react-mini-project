@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useReducer } from "react";
+import * as Reducer from '../store/hooks_state/hooks_reducer';
+import * as ACTIONS from '../store/actions/actions';
 
 const HooksContainer1 = () => {
   const [value, setValue] = useState(0);
   const [effect, setEffect] = useState(null);
+
+  const [state, dispatch] = useReducer(Reducer.HooksReducer, Reducer.initialState);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,6 +26,18 @@ const HooksContainer1 = () => {
     setEffect('changed!!!');
   }
 
+  const dispatchTrueHandler = () => {
+    // dispatch(ACTIONS.SUCCESS);
+    // dispatch({type: "SUCCESS"});
+    dispatch(ACTIONS.success());
+  }
+
+  const dispatchFalseHandler = () => {
+    // dispatch(ACTIONS.FAILURE);
+    // dispatch({type: "FAILURE"});
+    dispatch(ACTIONS.failure());
+  }
+
   return (
     <div>
       React Hooks
@@ -34,6 +49,11 @@ const HooksContainer1 = () => {
       <div>
         {effect ? <p>{effect}</p> : <p>no value</p>}
         <button onClick={changeEffect}>Change</button>
+      </div>
+      <div>
+        {state.stateprop1 ? <p>True!</p> : <p>False!</p>}
+        <button onClick={dispatchTrueHandler}>Dispatch True</button>
+        <button onClick={dispatchFalseHandler}>Dispatch False</button>
       </div>
     </div>
   )
