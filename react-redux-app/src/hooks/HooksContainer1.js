@@ -63,6 +63,11 @@ const HooksContainer1 = () => {
         <button onClick={context.plusGlobalState}>Context Plus</button>
         <button onClick={context.minusGlobalState}>Context Minus</button>
       </div>
+      <div>
+        {context.contextProps ? <p>True</p> : <p>False</p>}
+        <button onClick={context.dispatchContextTrueHandler}>Dispatch Context True</button>
+        <button onClick={context.dispatchContextFalseHandler}>Dispatch Context False</button>
+      </div>
     </div>
   )
 }
