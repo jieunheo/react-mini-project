@@ -1,8 +1,11 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 import * as Reducer from '../store/hooks_state/hooks_reducer';
 import * as ACTIONS from '../store/actions/actions';
+import Context from "../utils/context";
 
 const HooksContainer1 = () => {
+  const context = useContext(Context);
+
   const [value, setValue] = useState(0);
   const [effect, setEffect] = useState(null);
 
@@ -54,6 +57,11 @@ const HooksContainer1 = () => {
         {state.stateprop1 ? <p>True!</p> : <p>False!</p>}
         <button onClick={dispatchTrueHandler}>Dispatch True</button>
         <button onClick={dispatchFalseHandler}>Dispatch False</button>
+      </div>
+      <div>
+        <p>{context.globalState}</p>
+        <button onClick={context.plusGlobalState}>Context Plus</button>
+        <button onClick={context.minusGlobalState}>Context Minus</button>
       </div>
     </div>
   )
