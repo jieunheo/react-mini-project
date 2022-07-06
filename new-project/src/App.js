@@ -45,7 +45,7 @@ class App extends Component {
         <form onSubmit={this.submitHandler}>
           <button type='submit'>More</button>
         </form>
-        {this.state.loading && <Loading />}
+        {this.state.loading && <Loading message='Loading...' />}
 				{!this.state.loading && this.state.users.map(user => (
 					<div key={user.id.value}>
 						<h5>{user.name.first}</h5>

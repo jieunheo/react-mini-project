@@ -1,6 +1,6 @@
-const Loading = () => {
+const Loading = ({ message }) => {
 	return (
-		<div>Loading...</div>
+		<div>{message}</div>
 	);
 }
 
