@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Loading from './Loading';
 
 class App extends Component {
 	constructor (props) {
@@ -44,7 +45,7 @@ class App extends Component {
         <form onSubmit={this.submitHandler}>
           <button type='submit'>More</button>
         </form>
-        {this.state.loading && <p>Loading...</p>}
+        {this.state.loading && <Loading />}
 				{!this.state.loading && this.state.users.map(user => (
 					<div key={user.id.value}>
 						<h5>{user.name.first}</h5>
