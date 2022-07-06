@@ -10,6 +10,9 @@ class App extends Component {
 			users: [],
 			loading: false
 		}
+
+		// 함수 bind
+		this.submitHandler = this.submitHandler.bind(this);
 	}
   
   // api에서 user 값을 가져온다.
@@ -24,6 +27,12 @@ class App extends Component {
 			}));
 	}
 
+	// 더보기
+	submitHandler(e) {
+		e.preventDefault();
+		this.getUser();
+	}
+
 	// component가 mount 된 직후 실행
 	componentWillMount() {
     this.getUser();
@@ -32,6 +41,9 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+        <form onSubmit={this.submitHandler}>
+          <button type='submit'>More</button>
+        </form>
         {this.state.loading && <p>Loading...</p>}
 				{!this.state.loading && this.state.users.map(user => (
 					<div key={user.id.value}>
