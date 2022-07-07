@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NewsList from "../components/NewsList";
 
 const News = () => {
 	const [news, setNews] = useState([]);
@@ -26,14 +27,7 @@ const News = () => {
   return (
     <div>
       <h1>News Page</h1>
-			<div>
-				{news.map((item, index) => (
-					<div key={index}>
-						<h2>{item.title}</h2>
-						<p>{item.author}</p>
-					</div>
-				))}
-			</div>
+			<NewsList news={news} />
     </div>
   )
 }
