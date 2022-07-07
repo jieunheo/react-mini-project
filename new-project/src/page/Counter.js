@@ -1,11 +1,14 @@
+import { Component } from "react";
 
 
-const Counter = () => {
-  return (
-    <div>
-      <h1>Counter Page</h1>
-    </div>
-  )
+class Counter extends Component () {
+  render() {
+    return (
+      <div>
+        <h1>Counter Page</h1>
+      </div>
+    )
+  }
 }
 
 export default Counter;
