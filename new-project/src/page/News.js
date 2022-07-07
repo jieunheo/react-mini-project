@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import NewsForm from "../components/NewsForm";
 import NewsList from "../components/NewsList";
 
 const News = () => {
 	const [news, setNews] = useState([]);
-	const [search, setSearch] = useState('react');
 	const [url, setUrl] = useState(`https://hn.algolia.com/api/v1/search?query=react`);
 	const [loading, setLoading] = useState(false);
 
@@ -28,28 +28,18 @@ const News = () => {
 		fetchNews();
 	}, [url]);
 
-	const searchCangeHandler = (event) => {
-		setSearch(event.target.value);
+	let content;
+	if(!loading && (news === null || news.length === 0)) {
+		content = <p>No data</p>;
+	} else if(!loading) {
+		content = <NewsList news={news} />;
 	}
-	
-	const searchHandler = (event) => {
-		event.preventDefault();
-		setUrl(`https://hn.algolia.com/api/v1/search?query=${search}`);
-	}
-
   return (
     <div>
       <h1>News Page</h1>
-			<form onSubmit={searchHandler}>
-				<input
-					type='text'
-					value={search}
-					onChange={searchCangeHandler}
-				/>
-				<button type='submit'>Search</button>
-			</form>
+			<NewsForm setUrl={setUrl} />
 			{loading && <p>Loading...</p>}
-			{!loading && <NewsList news={news} />}
+			{content}
     </div>
   )
 }
