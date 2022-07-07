@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navigator from './components/Navigator';
 import Counter from './page/Counter';
 import Home from './page/Home';
+import News from './page/News';
 import Random from './page/Random';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
 					<Route path='/' element={<Home />} />
 					<Route path='/random' element={<Random />} />
 					<Route path='/counter' element={<Counter />} />
+					<Route path='/news' element={<News />} />
 				</Routes>
 			</BrowserRouter>
 		);

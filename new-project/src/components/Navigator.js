@@ -14,6 +14,9 @@ const Navigator = () => {
         <li>
           <Link to='/counter'>Counter</Link>
         </li>
+        <li>
+          <Link to='/news'>News</Link>
+        </li>
       </ul>
     </nav>
   )
