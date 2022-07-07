@@ -12,12 +12,14 @@ const App = () => {
 		return (
 			<BrowserRouter>
 				<Navigator />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/random' element={<Random />} />
-					<Route path='/counter' element={<Counter />} />
-					<Route path='/news' element={<News />} />
-				</Routes>
+				<main>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/random' element={<Random />} />
+						<Route path='/counter' element={<Counter />} />
+						<Route path='/news' element={<News />} />
+					</Routes>
+				</main>
 			</BrowserRouter>
 		);
 }

@@ -42,14 +42,16 @@ class Random extends Component {
 
 	render() {
 		return (
-			<div>
+			<>
 				<h1>Random Page</h1>
-        <form onSubmit={this.submitHandler}>
-          <button type='submit'>More</button>
-        </form>
-        {this.state.loading && <Loading message='Loading...' />}
-				{!this.state.loading && <RandomList users={this.state.users} />}
-			</div>
+				<div className='random'>
+					<form onSubmit={this.submitHandler}>
+						<button type='submit'>More</button>
+					</form>
+					{this.state.loading && <Loading message='Loading...' />}
+					{!this.state.loading && <RandomList users={this.state.users} />}
+				</div>
+			</>
 		);
 	};
 }

@@ -1,0 +1,186 @@
+body {
+  background-color: #222;
+}
+
+ul, li {
+  list-style: none;
+}
+
+nav ul {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+button {
+  appearance: none;
+  border: none;
+
+  background-color: steelblue;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 8px;
+
+  transition: all .2s;
+}
+
+button:hover {
+  background-color: rgb(88, 140, 183);
+}
+
+button:active {
+  transform: scale(95%);
+}
+
+.error {
+  color: red;
+}
+
+.loading {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/* random */
+.random {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.random form {
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.random-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.random-list > div {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 30px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.user-profile {
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+.user-addr {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 960px) {
+  .random-list > div {
+    width: 48%;
+  }
+
+  .user-card {
+    gap: 15px;
+  }
+}
+
+/* counter */
+.counter {
+  text-align: center;
+}
+
+.counter h2 {
+  color: white;
+  padding: 20px;
+}
+
+.counter button {
+  margin: 0 5px;
+}
+
+/* news */
+.news-wrap {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-form input[type=text]{
+  width: 60%;
+  min-width: 200px;
+
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.news-form button {
+  border-radius: 0 8px 8px 0;
+}
+
+.news-form button:active {
+  transform: none;
+}
+
+.news-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+
+  transition: all .2s;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+}
+
+.news-title {
+  font-size: 20px;
+  color: #222;
+}
+
+.news-author {
+  margin-bottom: 0;
+}

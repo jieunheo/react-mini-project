@@ -13,7 +13,7 @@ const NewsForm = ({ setUrl }) => {
 	}
 
   return (
-    <form onSubmit={searchHandler}>
+    <form className='news-form' onSubmit={searchHandler}>
       <input
         type='text'
         value={search}

@@ -17,14 +17,16 @@ const Counter = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>Counter Page</h1>
-      <h2>count: {count}</h2>
-      <div>
-        <button type="button" onClick={increment}>UP</button>
-        <button type="button" onClick={decrement}>DOWN</button>
+      <div className='counter'>
+        <h2>count: {count}</h2>
+        <div>
+          <button type="button" onClick={increment}>UP</button>
+          <button type="button" onClick={decrement}>DOWN</button>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

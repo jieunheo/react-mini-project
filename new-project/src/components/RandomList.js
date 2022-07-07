@@ -2,7 +2,7 @@ import RandomItem from "./RandomItem";
 
 const RandomList = ({ users }) => {
 	return (
-    <div>
+    <div className='random-list'>
       {users.map(user => <RandomItem key={user.id.value} user={user} />)}
     </div>
   )

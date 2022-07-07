@@ -37,9 +37,11 @@ const News = () => {
   return (
     <div>
       <h1>News Page</h1>
-			<NewsForm setUrl={setUrl} />
-			{loading && <p>Loading...</p>}
-			{content}
+			<div className='news-wrap'>
+				<NewsForm setUrl={setUrl} />
+				{loading && <p>Loading...</p>}
+				{content}
+			</div>
     </div>
   )
 }
