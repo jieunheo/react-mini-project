@@ -3,7 +3,7 @@
 const Counter = () => {
   return (
     <div>
-      Counter
+      <h1>Counter Page</h1>
     </div>
   )
 }
