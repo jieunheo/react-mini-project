@@ -5,8 +5,10 @@ const News = () => {
 	const [news, setNews] = useState([]);
 	const [search, setSearch] = useState('react');
 	const [url, setUrl] = useState(`https://hn.algolia.com/api/v1/search?query=react`);
+	const [loading, setLoading] = useState(false);
 
 	const fetchNews = async () => {
+		setLoading(true);
 		try {
 			const response = await fetch(url);
 
@@ -19,6 +21,7 @@ const News = () => {
 		} catch (error) {
 			console.log(error);
 		}
+		setLoading(false);
 	}
 
 	useEffect(() => {
@@ -45,7 +48,8 @@ const News = () => {
 				/>
 				<button type='submit'>Search</button>
 			</form>
-			<NewsList news={news} />
+			{loading && <p>Loading...</p>}
+			{!loading && <NewsList news={news} />}
     </div>
   )
 }
