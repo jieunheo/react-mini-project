@@ -16,12 +16,14 @@ import Home from './functional/home';
 import RenderListItem from './functional/renderlistitem';
 
 import * as ACTIONS from './store/actions/actions';
+import HookContainer from './hooks/hooks_container';
 
 import Auth from './utils/auth';
 import AuthCheck from './utils/authcheck';
 import history from './utils/history';
 
 import { Router, Route, Switch, Redirect } from 'react-router';
+import HooksForm from './hooks/hooks-form';
 
 
 
@@ -71,6 +73,8 @@ class Routes extends Component {
             <Route path='/authcheck' render={() => <AuthCheck auth={auth} /> } />
             <Route path='/redirect' component={UnauthRedirect} />
             <Route path='/renderlist' component={RenderList} />
+            <Route path='/hookcontainer' component={HookContainer} />
+            <Route path='/hooksform' component={HooksForm} />
 
             <Route path='/callback' render={(props) => { handleAuthentication(props); return <Callback />}} />
             <Route path="/component1" render={(props) => <Component1 {...props} /> } />
