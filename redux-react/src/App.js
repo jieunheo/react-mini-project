@@ -1,20 +1,14 @@
-import './App.css';
-import * as styles from './style';
-import classes from './style.module.css';
+import { Component } from 'react';
+import Container1 from './containers/container1';
 
-function App() {
-  const style = {
-    color: 'red',
-    backgroundColor: 'yellow'
-  }
-
-  return (
-    <div className="App" style={styles.styles}>
-      Hello World
-      <button style={style}>Button</button>
-      <button style={classes.btn}>Button</button>
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+      <div>
+        <Container1 />
+      </div>
+		);
+	};
 }
 
 export default App;
