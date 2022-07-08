@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 class Header extends Component {
@@ -16,9 +16,9 @@ class Header extends Component {
     return (
       <nav>
         <ul>
-          <li><Link to='/'>Container1</Link></li>
+          <li><NavLink to='/' style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}>Container1</NavLink></li>
           {this.state.nums.map(num => (
-            <li><Link key={num.id} to={{pathname: `/component/${num.id}`}}>Component{num.id}</Link></li>
+            <li><NavLink key={num.id} to={{pathname: `/component/${num.id}`}} style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}>Component{num.id}</NavLink></li>
           ))}
         </ul>
       </nav>
