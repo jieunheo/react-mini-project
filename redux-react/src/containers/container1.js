@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 class Container1 extends Component {
 	render() {
-    const user_text = 'text';
+    const user_text = 'Hello wolid';
 
 		return (
       <div>
@@ -17,6 +17,9 @@ class Container1 extends Component {
         <button onClick={this.props.action_creator1}>Dispatch Action Creator 1</button>
         <button onClick={this.props.action_creator2}>Dispatch Action Creator 2</button>
         <button onClick={() => this.props.action_creator3(user_text)}>Dispatch Action Creator 3</button>
+        {this.props.stateprop1 && (
+          <h2>{this.props.user_text}</h2>
+        )}
       </div>
 		);
 	};
@@ -24,8 +27,8 @@ class Container1 extends Component {
 
 function mapStateToProps(state) {
   return {
-    stateprop1: state.stateprop1,
-    user_text: state.user_text
+    stateprop1: state.reducer1.stateprop1,
+    user_text: state.user_reducer.user_text
   }
 }
 
