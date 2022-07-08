@@ -1,11 +1,13 @@
 import { Component } from 'react';
-import Container1 from './containers/container1';
+import Container1 from './containers/Container1';
+
+import Router from './router';
 
 class App extends Component {
 	render() {
 		return (
       <div>
-        <Container1 />
+				<Router />
       </div>
 		);
 	};
