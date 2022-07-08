@@ -2,7 +2,8 @@ import * as ACTION_TYPES from '../actions/action_types';
 
 // 초기값
 const initialState = {
-  stateprop1: false
+  stateprop1: false,
+  user_text: ''
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         stateprop1: false
+      };
+    case ACTION_TYPES.USER_INPUT:
+      return {
+        ...state,
+        user_text: action.payload
       };
     default:
       return state;
