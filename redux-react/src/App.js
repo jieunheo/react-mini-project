@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import Container1 from './containers/Container1';
 
 import Router from './router';
 

@@ -1,9 +1,14 @@
+import { useLocation, useParams } from "react-router";
 
 
 const Component1 = props => {
+  const { pathname } = useLocation();
+  const { id } = useParams();
+
   return (
     <div>
-      Component1
+      Component pathname: {pathname}<br />
+      Component id: {id}
     </div>
   );
 }
